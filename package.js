@@ -9,6 +9,15 @@ Package.on_use(function (api) {
   api.versionsFrom('1.1.0.3');
 
   api.use('meteor-platform');
+  api.use('mongo');
+  api.use('aldeed:simple-schema@1.3.3');
+  api.use('aldeed:collection2@2.5.0');
+  api.use('simple:json-routes@2.1.0');
+  api.use('momentjs:moment@2.17.1');
+  api.use('ecmascript@0.9.0');
+  api.use('session');
+  api.use('http');
+  api.use('react-meteor-data@0.2.15');
 
   api.use('mrt:moment@2.8.1', 'client');
   api.use('grove:less@0.1.1', 'client');
@@ -17,6 +26,7 @@ Package.on_use(function (api) {
   api.use('clinical:fonts@1.0.0', 'client');
   api.use('clinical:auto-resizing@0.1.0', 'client');
   api.use('clinical:hipaa-logger@1.0.0');
+  api.use('clinical:glass-ui@2.2.4');
 
   api.imply('clinical:hipaa-logger');
 
@@ -38,4 +48,6 @@ Package.on_use(function (api) {
   api.addFiles('components/hipaaLogPage/hipaaLogPage.less', "client");
 
   api.export('HipaaAuditLog');
+
+  api.mainModule('index.jsx', 'client');
 });
