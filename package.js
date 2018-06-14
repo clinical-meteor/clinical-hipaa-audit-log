@@ -1,6 +1,6 @@
 Package.describe({
   summary: "HIPAA audit log for ClinicalFramework.",
-  version: "2.4.4",
+  version: "2.4.5",
   git: "http://github.com/clinical-meteor/hipaa-audit-log.git",
   name: "clinical:hipaa-audit-log"
 });
@@ -27,6 +27,11 @@ Package.on_use(function (api) {
   api.use('clinical:auto-resizing@0.1.0', 'client');
   api.use('clinical:hipaa-logger@1.0.0');
   api.use('clinical:glass-ui@2.2.4');
+
+  api.use('clinical:extended-api@2.2.2');
+  api.use('clinical:hl7-resource-datatypes@3.0.1');
+  api.use('clinical:hl7-resource-bundle@1.3.10');
+  api.use('clinical:hl7-resource-audit-event@1.4.1');
 
   api.imply('clinical:hipaa-logger');
 
