@@ -1,6 +1,6 @@
 Package.describe({
   summary: "HIPAA audit log for ClinicalFramework.",
-  version: "2.4.5",
+  version: "3.0.1",
   git: "http://github.com/clinical-meteor/hipaa-audit-log.git",
   name: "clinical:hipaa-audit-log"
 });
@@ -22,7 +22,7 @@ Package.on_use(function (api) {
   api.use('mrt:moment@2.8.1', 'client');
   api.use('grove:less@0.1.1', 'client');
 
-  api.use('clinical:router@2.0.17');
+  // api.use('clinical:router@2.0.17');
   api.use('clinical:fonts@1.0.0', 'client');
   api.use('clinical:auto-resizing@0.1.0', 'client');
   api.use('clinical:hipaa-logger@1.0.0');
@@ -40,17 +40,17 @@ Package.on_use(function (api) {
   api.addFiles('server/initialize.js', "server");
   api.addFiles('server/publication.js', "server");
 
-  api.addFiles('components/hipaaRibbon/hipaaRibbon.html', "client");
-  api.addFiles('components/hipaaRibbon/hipaaRibbon.js', "client");
-  api.addFiles('components/hipaaRibbon/hipaaRibbon.less', "client");
+  // api.addFiles('components/hipaaRibbon/hipaaRibbon.html', "client");
+  // api.addFiles('components/hipaaRibbon/hipaaRibbon.js', "client");
+  // api.addFiles('components/hipaaRibbon/hipaaRibbon.less', "client");
 
-  api.addFiles('components/hipaaAuditLog/hipaaAuditLog.html', "client");
-  api.addFiles('components/hipaaAuditLog/hipaaAuditLog.js', "client");
-  api.addFiles('components/hipaaAuditLog/hipaaAuditLog.less', "client");
+  // api.addFiles('components/hipaaAuditLog/hipaaAuditLog.html', "client");
+  // api.addFiles('components/hipaaAuditLog/hipaaAuditLog.js', "client");
+  // api.addFiles('components/hipaaAuditLog/hipaaAuditLog.less', "client");
 
-  api.addFiles('components/hipaaLogPage/hipaaLogPage.html', "client");
-  api.addFiles('components/hipaaLogPage/hipaaLogPage.js', "client");
-  api.addFiles('components/hipaaLogPage/hipaaLogPage.less', "client");
+  // api.addFiles('components/hipaaLogPage/hipaaLogPage.html', "client");
+  // api.addFiles('components/hipaaLogPage/hipaaLogPage.js', "client");
+  // api.addFiles('components/hipaaLogPage/hipaaLogPage.less', "client");
 
   api.export('HipaaAuditLog');
 
