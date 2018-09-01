@@ -1,6 +1,6 @@
 Package.describe({
   summary: "HIPAA audit log for ClinicalFramework.",
-  version: "3.0.1",
+  version: "3.1.0",
   git: "http://github.com/clinical-meteor/hipaa-audit-log.git",
   name: "clinical:hipaa-audit-log"
 });
@@ -10,8 +10,8 @@ Package.on_use(function (api) {
 
   api.use('meteor-platform');
   api.use('mongo');
-  api.use('aldeed:simple-schema@1.3.3');
-  api.use('aldeed:collection2@2.5.0');
+
+  api.use('aldeed:collection2@3.0.0');
   api.use('simple:json-routes@2.1.0');
   api.use('momentjs:moment@2.17.1');
   api.use('ecmascript@0.9.0');
@@ -25,13 +25,14 @@ Package.on_use(function (api) {
   // api.use('clinical:router@2.0.17');
   api.use('clinical:fonts@1.0.0', 'client');
   api.use('clinical:auto-resizing@0.1.0', 'client');
-  api.use('clinical:hipaa-logger@1.0.0');
+  api.use('clinical:hipaa-logger@2.0.0');
   api.use('clinical:glass-ui@2.2.4');
 
   api.use('clinical:extended-api@2.2.2');
-  api.use('clinical:hl7-resource-datatypes@3.0.1');
-  api.use('clinical:hl7-resource-bundle@1.3.10');
-  api.use('clinical:hl7-resource-audit-event@1.4.1');
+
+  api.use('clinical:hl7-resource-datatypes@4.0.0');
+  api.use('clinical:hl7-resource-bundle@1.4.0');
+  api.use('clinical:hl7-resource-audit-event@1.5.0');
 
   api.imply('clinical:hipaa-logger');
 
@@ -56,3 +57,8 @@ Package.on_use(function (api) {
 
   api.mainModule('index.jsx', 'client');
 });
+
+
+Npm.depends({
+  "simpl-schema": "1.5.3"
+})
