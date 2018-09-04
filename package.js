@@ -1,6 +1,6 @@
 Package.describe({
   summary: "HIPAA audit log for ClinicalFramework.",
-  version: "3.1.0",
+  version: "3.1.1",
   git: "http://github.com/clinical-meteor/hipaa-audit-log.git",
   name: "clinical:hipaa-audit-log"
 });
@@ -10,11 +10,12 @@ Package.on_use(function (api) {
 
   api.use('meteor-platform');
   api.use('mongo');
+  api.use('ecmascript@0.9.0');
 
   api.use('aldeed:collection2@3.0.0');
   api.use('simple:json-routes@2.1.0');
   api.use('momentjs:moment@2.17.1');
-  api.use('ecmascript@0.9.0');
+
   api.use('session');
   api.use('http');
   api.use('react-meteor-data@0.2.15');

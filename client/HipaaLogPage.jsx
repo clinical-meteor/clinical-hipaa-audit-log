@@ -8,6 +8,7 @@ import React  from 'react';
 import { ReactMeteorData } from 'meteor/react-meteor-data';
 import ReactMixin  from 'react-mixin';
 
+import { AuditEventsTable } from 'meteor/clinical:hl7-resource-audit-event';
 
 export class HipaaLogPage extends React.Component {
   getMeteorData() {
@@ -30,9 +31,9 @@ export class HipaaLogPage extends React.Component {
       <div id='conditionsPage'>
         <VerticalCanvas>
           <GlassCard height='auto'>
-            <CardTitle title='HipaaLog' />
+            <CardTitle title='HIPAA - Audit Events' />
             <CardText>
-
+              <AuditEventsTable />
             </CardText>
           </GlassCard>
         </VerticalCanvas>
