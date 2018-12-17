@@ -88,7 +88,7 @@ jobs:
     - run: cd .. && mkdir -p ${HOME}/.meteor
     
     # If Meteor is already cached, do not need to build it again.
-    - run: cd .. && if [ ! -e .meteor/meteor ]; then curl https://install.meteor.com?=release=1.6.0.1 | /bin/sh; else echo "Meteor seems to be cached"; fi;
+    - run: cd .. && if [ ! -e .meteor/meteor ]; then curl https://install.meteor.com?=release=1.8.0.1 | /bin/sh; else echo "Meteor seems to be cached"; fi;
 
     # Link the meteor executable into /usr/bin
     - run: cd .. && sudo ln -s .meteor/meteor /usr/bin/meteor
