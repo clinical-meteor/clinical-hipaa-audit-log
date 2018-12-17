@@ -11,6 +11,6 @@ describe('clinical:hipaa-audit-log', function () {
     //console.log('afterEach');
   });
   it('exists globally', function () {
-    expect(HipaaAuditLogTests).to.exist;
+    expect(HipaaAuditLog).to.exist;
   });
 });
